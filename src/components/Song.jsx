@@ -46,8 +46,8 @@ const Song = ({ SongData }) => {
   //   }
   // }, []);
 
-  console.log(asd, "aaaa");
-  console.log(___, "aaaa");
+  // console.log(asd, "aaaa");
+  // console.log(___, "aaaa");
   const PlaySong = (i) => {
     // USeCurrentTrack({ i, a });
     setIDforSong(i.track.id);

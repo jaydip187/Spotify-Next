@@ -6,6 +6,7 @@ import Player from "@/components/Player/Player";
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import WebPlayback from "@/components/Player/Player copy";
 // import { useRecoilValue } from "recoil";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
                 <SlideBar />
                 {children}
               </div>
-              <PlayerCLient></PlayerCLient>
+              <Player />
             </div>
           </React.StrictMode>
         </SessionProviderTag>

@@ -14,3 +14,7 @@ export const IsPlayingState = atom({
   key: "IsPlayingState",
   default: false,
 });
+export const AccessTokenState = atom({
+  key: "AccessTokenState",
+  default: null,
+});

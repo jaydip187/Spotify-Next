@@ -7,16 +7,20 @@ import { seed_genres } from "@/lib/features";
 import SearchArtist from "./SearchArtist";
 import { useSession } from "next-auth/react";
 import SongCopy from "./Song copy";
+import { useRecoilState } from "recoil";
+import { AccessTokenState } from "@/atom/Atom";
 
 const HomeScreen = () => {
   const [Recentlyplayed, setRecentlyplayed] = useState(null);
   const [TopArtists, setTopArtists] = useState(null);
   const [TopTracks, setTopTracks] = useState(null);
+  const [___, setToken] = useRecoilState(AccessTokenState);
   const spotifyApi = UseSpotify();
   const { data: session, status } = useSession();
 
   useEffect(() => {
     if (spotifyApi.getAccessToken()) {
+      setToken(spotifyApi.getAccessToken());
       spotifyApi
         .getMyRecentlyPlayedTracks()
         .then((data) => {

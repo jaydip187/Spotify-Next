@@ -17,12 +17,12 @@ const USeCurrentTrack = () => {
   const i = useRecoilValue(UriTrackState);
   const { data: session } = useSession();
   const spotifyApi = UseSpotify();
-  console.log(i);
-  console.log(spotifyApi.getAccessToken());
+  // console.log(i);
+  // console.log(spotifyApi.getAccessToken());
   useEffect(() => {
     // spotifyAPI.setAccessToken(session?.user.accessToken);
-    console.log(i, "rrrrrrrrrr");
-    console.log(session?.user.accessToken, "rrrrrrrrrr");
+    // console.log(i, "rrrrrrrrrr");
+    // console.log(session?.user.accessToken, "rrrrrrrrrr");
     function ASDF() {
       const playUrl = "https://api.spotify.com/v1/me/player/play";
       const headers = {
@@ -33,7 +33,7 @@ const USeCurrentTrack = () => {
         uris: [i],
       };
 
-      console.log(headers.Authorization);
+      // console.log(headers.Authorization);
 
       console.log("Try Catch");
       try {
